@@ -4,6 +4,7 @@ import styles from './SignInScreen.style';
 import FormInput from '../../components/shared/FormInput';
 import FormButton from '../../components/shared/FormButton';
 import {signIn} from '../../utils/auth';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const SignInScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -23,7 +24,13 @@ const SignInScreen = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
         {/* Header */}
-        <Text style={styles.header}>SignIn Screen</Text>
+
+        <FontAwesome
+          name="user-circle"
+          size={150}
+          color="#3d5afe"
+          style={{marginTop: 20, marginBottom: 20}}
+        />
 
         {/* email */}
         <FormInput
@@ -50,7 +57,7 @@ const SignInScreen = ({navigation}) => {
           <Text>Hesabınız yok mu ?</Text>
           <Text
             style={{
-              color: 'blue',
+              color: '#3d5afe',
               marginLeft: 5,
             }}
             onPress={() => {

@@ -1,9 +1,11 @@
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import FormInput from '../../components/shared/FormInput';
 import FormButton from '../../components/shared/FormButton';
 import {createQuiz} from '../../utils/database';
-
+import styles from './CreateQuizScreen.style';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 const CreateQuizScreen = ({navigation}) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -23,7 +25,25 @@ const CreateQuizScreen = ({navigation}) => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
+    <SafeAreaView style={styles.container}>
+      {/* Top */}
+      <View style={styles.topBarView}>
+        <MaterialIcons
+          name="arrow-back"
+          size={30}
+          color="black"
+          onPress={() => {
+            navigation.navigate('Home');
+          }}
+        />
+        <Text style={styles.title}>Create Quizz</Text>
+      </View>
+      <FontAwesome5
+        name="pencil-alt"
+        size={150}
+        color="#3d5afe"
+        style={{margin: 20, alignSelf: 'center'}}
+      />
       <FormInput
         placeholderText="Title"
         onchangeText={setTitle}

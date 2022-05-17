@@ -4,6 +4,7 @@ import styles from './SignUpScreen.style';
 import FormInput from '../../components/shared/FormInput';
 import FormButton from '../../components/shared/FormButton';
 import {signUp} from '../../utils/auth';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const SignUpScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,7 +26,13 @@ const SignUpScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
-      <Text style={styles.header}>Sign UPP</Text>
+      <FontAwesome5
+        name="user-plus"
+        size={135}
+        color="#3d5afe"
+        style={{marginLeft: 50, marginTop: 20, marginBottom: 20}}
+      />
+
       {/* email */}
       <FormInput
         labelText="Email"
@@ -58,7 +65,7 @@ const SignUpScreen = ({navigation}) => {
         <Text>Zaten hesabınız var mı ?</Text>
         <Text
           style={{
-            color: 'blue',
+            color: '#3d5afe',
             marginLeft: 5,
           }}
           onPress={() => {
