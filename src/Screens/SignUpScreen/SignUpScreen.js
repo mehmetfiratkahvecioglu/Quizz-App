@@ -62,7 +62,7 @@ const SignUpScreen = ({navigation}) => {
 
       {/* FOOTER */}
       <View style={styles.footerContainer}>
-        <Text>Zaten hesabınız var mı ?</Text>
+        <Text>Do you already have an account??</Text>
         <Text
           style={{
             color: '#3d5afe',
@@ -71,7 +71,7 @@ const SignUpScreen = ({navigation}) => {
           onPress={() => {
             navigation.navigate('SignIn');
           }}>
-          Giriş yap.
+          Sign in.
         </Text>
       </View>
     </SafeAreaView>
