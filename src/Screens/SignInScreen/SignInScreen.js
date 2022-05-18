@@ -54,7 +54,7 @@ const SignInScreen = ({navigation}) => {
 
         {/* FOOTER */}
         <View style={styles.footerContainer}>
-          <Text>Hesabınız yok mu ?</Text>
+          <Text>Don't have an account? ?</Text>
           <Text
             style={{
               color: '#3d5afe',
@@ -63,7 +63,7 @@ const SignInScreen = ({navigation}) => {
             onPress={() => {
               navigation.navigate('SignUp');
             }}>
-            Hesap Yarat.
+            Sign Up.
           </Text>
         </View>
       </View>
